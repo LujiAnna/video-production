@@ -319,7 +319,6 @@ header nav {
     margin-top: 18px;
 }
 
-
 /* ---------------------------------- */
 
 
@@ -737,22 +736,23 @@ input[type=checkbox] {
 
 .form-messages {
     width: 70%;
-/*    center*/
+    /*    center*/
     margin: 0 auto;
     padding: 10px;
-    margin-bottom:30px;
-    border-radius: 3px;   
+    margin-bottom: 30px;
+    border-radius: 3px;
     color: #333;
 }
 
 /*    green color for success*/
 .success {
-/*    hit command+e to open color pallete*/
+    /*    hit command+e to open color pallete*/
     background-color: rgba(39, 196, 39, 0.86);
 }
+
 /*    red color for error*/
 .error {
-/*    hit command+e to open color pallete*/
+    /*    hit command+e to open color pallete*/
     background-color: rgba(206, 44, 44, 0.86);
 }
 
