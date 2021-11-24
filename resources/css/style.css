@@ -1,0 +1,886 @@
+/* Orange color: #e67e22 */
+
+
+/* Cross Browser Testing: use Autoprefixer extension to Edit-Auto Prefix Selection: Chrome, edge, firefox, safari, opera, etc*/
+
+
+/*Older Browser Versions Testing: Internet Explorer: 5,6,7: use js script*/
+
+
+/*W3C validation */
+
+
+/* ---------------------------------- */
+
+
+/* BASIC SET UP */
+
+
+/* ---------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #505050;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* remove horizontal scroll bar */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* clear floats with clearfix and add this class on parent of the floating elements*/
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* ---------------------------------- */
+
+
+/* REUSABLE COMPONENTS */
+
+
+/* ---------------------------------- */
+
+.row {
+    /* max size of the device, I think theres bigger size now! */
+    /* max-width: 1140px; */
+    max-width: 100%;
+    /* center the rows */
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+.bold-orange {
+    color: #e67e22;
+    font-weight: 400;
+}
+
+.normal-orange {
+    color: #e67e22;
+}
+
+
+/* HEADER */
+
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.699)), to(rgba(0, 0, 0, 0.699))), url(./img/hero-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699)), url(./img/hero-min.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    /* parallax in css */
+    background-attachment: fixed;
+}
+
+
+/* remove top margin caused by normalized css */
+
+
+/* HEADINGS */
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+
+/* adding content(line of ht 2px) using css only pseudo class, but can also use border-top/button */
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: '';
+    width: 100px;
+    /* center the line */
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+/* PARAGRAPHS */
+
+.long-copy {
+    /* line ht should be btn 120% and 145% */
+    line-height: 145%;
+    /* cut the too long line */
+    width: 70%;
+    /* center the paragraphs */
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+/* absolute position to be able to vert/hor position this */
+
+.hero-text-box {
+    position: absolute;
+    /* width: 1140px; */
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-40%, -50%);
+    transform: translate(-40%, -50%);
+}
+
+
+/* ICONS */
+
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+    /* text-align: center; */
+}
+
+
+/* LOGO */
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+    border-radius: 50%;
+}
+
+
+/* ---------------------------------- */
+
+
+/* margin: MAIN NAVIGATION */
+
+
+/* ---------------------------------- */
+
+header nav {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 60px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+    border-bottom: 2px solid #e67e22;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+
+/* ---------------------------------- */
+
+
+/*  MOBILE NAVIGATION */
+
+
+/* ---------------------------------- */
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    /* add pointer coz if href is not given, cursor pointer(hand) wont appear */
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+
+/* ---------------------------------- */
+
+
+/*  STICKY NAVIGATION */
+
+
+/* ---------------------------------- */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    /*  set vertical stacking of elements using max-z-index*/
+    z-index: 9999;
+}
+
+.sticky .main-nav a:link,
+.sticky .main-nav a:visited {
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .logo {
+    display: none;
+}
+
+.sticky .logo-black {
+    display: block;
+}
+
+.sticky .main-nav {
+    margin-top: 18px;
+}
+
+
+/* ---------------------------------- */
+
+
+/* LINKS */
+
+
+/* ---------------------------------- */
+
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+    -webkit-transition: border-bottom 0.2s color 0.2s;
+    transition: border-bottom 0.2s color 0.2s;
+    /* if do not want underline on an img link */
+    /* border:0; */
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+/* ---------------------------------- */
+
+
+/* BUTTONS */
+
+
+/* ---------------------------------- */
+
+
+/* state of link/button before and after visited */
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+
+/* state of link/button on hover and active/click state */
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #cf6d17;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+
+/* ---------------------------------- */
+
+
+/* FEATURES */
+
+
+/* ---------------------------------- */
+
+.section-features {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+
+/* COURSES */
+
+.courses-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.courses-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.course-photo {
+    width: 100%;
+    margin: 0;
+    /* fix out of browser width */
+    overflow: hidden;
+    background-color: #000;
+}
+
+.course-photo img {
+    width: 100%;
+    height: auto;
+    /* zoom out images to 115% big and get brighter */
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    /* animate */
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+    /* make img white with black container so can be made darker on hover */
+    opacity: 0.7;
+}
+
+
+/* remove extra padding */
+
+.section-courses {
+    padding: 0;
+}
+
+.course-photo img:hover {
+    /* 3- make img white so can be made brighter on hover */
+    opacity: 1;
+    /* 1- zoom back images to 100% big and get brighter */
+    /* 2- adding 0.03 removes white space when pic becomes smaller */
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+
+/* ---------------------------------- */
+
+
+/* HOW IT WORKS: STEPS */
+
+
+/* ---------------------------------- */
+
+.section-steps {
+    background-color: #f5f5f5;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.steps-box {
+    margin-top: 30px;
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+}
+
+.website-screen {
+    width: 50%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 40px;
+}
+
+.works-step div {
+    color: #cf6d17;
+    border: 2px solid #cf6d17;
+    display: inline-block;
+    border-radius: 50%;
+    height: 53px;
+    width: 53px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 140%;
+    margin-right: 25px;
+}
+
+.btn-web {
+    margin-right: 30px !important;
+}
+
+
+/* ---------------------------------- */
+
+
+/* COUNTRIES */
+
+
+/* ---------------------------------- */
+
+.section-countries {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.section-countries img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.country-feature {
+    margin-bottom: 5px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    /* text/icons alignment techniques */
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+
+/* TESTIMONIALS */
+
+.section-testimonials {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./img/back-student.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./img/back-student.jpg);
+    background-size: cover;
+    color: #fff;
+    /* parallax in css */
+    background-attachment: fixed;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: '\201C';
+    font-size: 500%;
+    /* make sure the parent is relative position */
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+/* ---------------------------------- */
+
+
+/* SIGN UP */
+
+
+/* ---------------------------------- */
+
+.section-plans {
+    background-color: #f5f5f5;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    /* x, y offset */
+    -webkit-box-shadow: 0 2px 2px #efefef;
+    box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22
+}
+
+
+/* smaller number 30% coz parent has 300% */
+
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-duration-course {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: none;
+}
+
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+/* ---------------------------------- */
+
+
+/* FORM */
+
+
+/* ---------------------------------- */
+
+.section-form {
+    /* % of the parent container */
+    width: 60%;
+    /* centering: can also use margin-left to be 40%/2=20% */
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+select,
+textarea {
+    /* fille its box */
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+
+/* add text box */
+
+textarea {
+    height: 100px;
+}
+
+
+/* space btn checkbox and text */
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+
+/* get rid of blue borders when focusing on the elements using pseudoclass focus */
+
+*:focus {
+    outline: none;
+}
+
+.form-messages {
+    width: 70%;
+/*    center*/
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom:30px;
+    border-radius: 3px;   
+    color: #333;
+}
+
+/*    green color for success*/
+.success {
+/*    hit command+e to open color pallete*/
+    background-color: rgba(39, 196, 39, 0.86);
+}
+/*    red color for error*/
+.error {
+/*    hit command+e to open color pallete*/
+    background-color: rgba(206, 44, 44, 0.86);
+}
+
+/* ---------------------------------- */
+
+
+/* FOOTER */
+
+
+/* ---------------------------------- */
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+
+/* side by side with margin */
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    /* remove border 1px soli color */
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-twitter:hover {
+    color: #55acee;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-instagram:hover {
+    color: #e95950;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* ---------------------------------- */
+
+
+/* ANIMATION */
+
+
+/* ---------------------------------- */
+
+
+/*doesnt work*/
+
+
+/* display: none/block; wont work here*/
+
+
+/* .js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+} */
+
+
+/*doesnt work*/
+
+
+/*both classes at the same time*/
+
+
+/* 
+.js--wp-1.animate__animated,
+.js--wp-2.animate__animated,
+.js--wp-3.animate__animated {
+    opacity: 1;
+} */
