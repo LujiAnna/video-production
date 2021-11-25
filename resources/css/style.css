@@ -146,7 +146,7 @@ h3 {
 h2:after {
     display: block;
     height: 2px;
-    background-color: #e67e22;
+    background-color: #fcb040;
     content: '';
     width: 100px;
     /* center the line */
@@ -190,7 +190,7 @@ h2:after {
 .icon-big {
     font-size: 350%;
     display: block;
-    color: #e67e22;
+    color: #fcb040;
     margin-bottom: 10px;
     /* text-align: center; */
 }
@@ -203,7 +203,7 @@ h2:after {
     width: auto;
     float: left;
     margin-top: 20px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 .logo-black {
@@ -212,7 +212,7 @@ h2:after {
     width: auto;
     float: left;
     margin: 5px 0;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 
@@ -254,7 +254,7 @@ header nav {
 
 .main-nav a:hover,
 .main-nav a:active {
-    border-bottom: 2px solid #e67e22;
+    border-bottom: 2px solid #fcb040;
     -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
@@ -331,7 +331,7 @@ a:link,
 a:visited {
     color: #e67e22;
     text-decoration: none;
-    border-bottom: 1px solid #e67e22;
+    border-bottom: 1px solid #fcb040;
     padding-bottom: 1px;
     -webkit-transition: border-bottom 0.2s color 0.2s;
     transition: border-bottom 0.2s color 0.2s;
@@ -564,7 +564,7 @@ input[type=submit]:active {
     display: inline-block;
     width: 30px;
     text-align: center;
-    color: #e67e22;
+    color: #fcb040;
     font-size: 120%;
     margin-right: 10px;
     /* text/icons alignment techniques */
@@ -577,8 +577,10 @@ input[type=submit]:active {
 /* TESTIMONIALS */
 
 .section-testimonials {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./img/back-student.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./img/back-student.jpg);
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./img/back-student.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./img/back-student.jpg); */
+    background-image: url(./img/back-student.jpg);
+    background-image: url(./img/back-student.jpg);
     background-size: cover;
     color: #fff;
     /* parallax in css */
@@ -587,36 +589,47 @@ input[type=submit]:active {
     padding-left: 20px;
 }
 
-blockquote {
-    padding: 2%;
-    font-style: italic;
-    line-height: 145%;
-    position: relative;
-    margin-top: 40px;
+/* TABLE */
+
+#schedule {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #333;
+    opacity: 0.7;
 }
 
-blockquote:before {
-    content: '\201C';
-    font-size: 500%;
-    /* make sure the parent is relative position */
-    position: absolute;
-    top: -5px;
-    left: -5px;
+/* #schedule .col {
+    float: right !important;
+} */
+
+#schedule caption {
+    text-transform: uppercase;
+    font-size: 150%;
+    margin-bottom: 1.4rem;
 }
 
-cite {
-    font-size: 90%;
-    margin-top: 25px;
-    display: block;
+#schedule td,
+#schedule th {
+    /* border: 1px solid #000; */
+    padding: 8px;
 }
 
-cite img {
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-    vertical-align: middle;
+#schedule tr:nth-child(even) {
+    background-color: #333;
 }
 
+#schedule tr:hover {
+    background-color: #000;
+}
+
+#schedule th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #fcb040;
+    color: white;
+}
 
 /* ---------------------------------- */
 
@@ -651,9 +664,8 @@ cite img {
     font-size: 300%;
     margin-bottom: 10px;
     font-weight: 100;
-    color: #e67e22
+    color: #fcb040;
 }
-
 
 /* smaller number 30% coz parent has 300% */
 
@@ -685,77 +697,6 @@ cite img {
     border-top-right-radius: 5px;
 }
 
-
-/* ---------------------------------- */
-
-
-/* FORM */
-
-
-/* ---------------------------------- */
-
-.section-form {
-    /* % of the parent container */
-    width: 60%;
-    /* centering: can also use margin-left to be 40%/2=20% */
-    margin: 0 auto;
-}
-
-input[type=text],
-input[type=tel],
-input[type=email],
-select,
-textarea {
-    /* fille its box */
-    width: 100%;
-    padding: 7px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
-
-
-/* add text box */
-
-textarea {
-    height: 100px;
-}
-
-
-/* space btn checkbox and text */
-
-input[type=checkbox] {
-    margin: 10px 5px 10px 0;
-}
-
-
-/* get rid of blue borders when focusing on the elements using pseudoclass focus */
-
-*:focus {
-    outline: none;
-}
-
-.form-messages {
-    width: 70%;
-    /*    center*/
-    margin: 0 auto;
-    padding: 10px;
-    margin-bottom: 30px;
-    border-radius: 3px;
-    color: #333;
-}
-
-/*    green color for success*/
-.success {
-    /*    hit command+e to open color pallete*/
-    background-color: rgba(39, 196, 39, 0.86);
-}
-
-/*    red color for error*/
-.error {
-    /*    hit command+e to open color pallete*/
-    background-color: rgba(206, 44, 44, 0.86);
-}
-
 /* ---------------------------------- */
 
 
@@ -765,7 +706,7 @@ input[type=checkbox] {
 /* ---------------------------------- */
 
 footer {
-    background-color: #333;
+    background-color: rgb(37, 37, 37);
     padding: 50px;
     font-size: 80%;
 }
@@ -824,8 +765,8 @@ footer {
     transition: color 0.2s;
 }
 
-.ion-social-twitter:hover {
-    color: #55acee;
+.ion-social-youtube:hover {
+    color: #FF0000;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
@@ -850,37 +791,3 @@ footer p {
 
 
 /* ---------------------------------- */
-
-
-/*doesnt work*/
-
-
-/* display: none/block; wont work here*/
-
-
-/* .js--wp-1,
-.js--wp-2,
-.js--wp-3 {
-    opacity: 0;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-}
-
-.js--wp-4 {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-} */
-
-
-/*doesnt work*/
-
-
-/*both classes at the same time*/
-
-
-/* 
-.js--wp-1.animate__animated,
-.js--wp-2.animate__animated,
-.js--wp-3.animate__animated {
-    opacity: 1;
-} */
