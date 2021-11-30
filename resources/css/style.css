@@ -111,7 +111,6 @@ header {
 
 /* HEADINGS */
 
-h1,
 h2,
 h3 {
     font-weight: 300;
@@ -119,6 +118,7 @@ h3 {
 }
 
 h1 {
+    font-weight: 300;
     margin-top: 0;
     color: #fff;
     font-size: 240%;
@@ -502,6 +502,7 @@ input[type=submit]:active {
     padding-right: 3%;
 }
 
+
 .steps-box:last-child {
     padding-left: 3%;
 }
@@ -597,6 +598,9 @@ input[type=submit]:active {
     width: 100%;
     background-color: #333;
     opacity: 0.7;
+    /* width: 80%; */
+    /* center the paragraphs */
+    margin-left: 5%;
 }
 
 /* #schedule .col {
@@ -612,7 +616,7 @@ input[type=submit]:active {
 #schedule td,
 #schedule th {
     /* border: 1px solid #000; */
-    padding: 8px;
+    padding: 10px;
 }
 
 #schedule tr:nth-child(even) {

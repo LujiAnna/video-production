@@ -3,31 +3,37 @@
     /* ...resolve/reduce weirdness */
     /* Big tablet to width smaller than the row px of 100%: from 1024 to 1200 : width for ipad in landscape mode */
     /* 1st, reduce screen to the lowest width:  1024/1023 */
-    
+
     @media only screen and (max-width: 1200px) {
+
         /* add spacing responsivity */
         .hero-text-box {
             width: 100%;
             padding: 0 2%;
         }
+
         /* .row {
         padding: 0 2%;
     } */
     }
+
     /* minify: font size */
     /* small tablet to big tablets: from 768/767 to 1023px : width for ipad in portrait mode */
     /* 1st, reduce screen to the lowest width:  768 */
-    
+
     @media only screen and (max-width: 1023px) {
+
         /* only change the base font, as all other fonts was defined other font in percentages. */
         /* Hence, all other font (in %) will automatically decrease */
         body {
             font-size: 18px;
         }
+
         /* reduce white-space */
         section {
             padding: 60px 0;
         }
+
         /* add horizontal padding/white-space
     .row {
         padding: 0 2%;
@@ -38,28 +44,36 @@
             /* center the paragraphs */
             margin-left: 10%;
         }
+
         .steps-box {
             margin-top: 10px;
         }
+
         .steps-box:last-child {
             margin-top: 10px;
         }
+
         .works-step {
             margin-bottom: 40px;
         }
+
         .works-step:last-of-type {
             margin-bottom: 20px;
         }
+
         .website-screen {
             width: 60%;
         }
+
         .icon-small {
             width: 18px;
             margin-right: 5px;
         }
+
         .country-feature {
             font-size: 90%
         }
+
         /* cite {
         font-size: 80%;
     } */
@@ -67,31 +81,38 @@
             width: 100%;
             margin-left: 0%;
         }
+
         .plan-price {
             font-size: 250%;
         }
+
         .plan-box h3 {
             font-size: 90%;
         }
+
         .section-form {
             /* % of the parent container */
             width: 80%;
         }
     }
+
     /* change styles & layout: columns to stack/rows */
     /* small phones to small tablets: from 481 to 767px : width for ipad */
     /* 1st, reduce screen to the lowest width: 481/480 */
-    
+
     @media only screen and (max-width: 767px) {
+
         /* only change the base font, as all other fonts was defined other font in percentages. */
         /* Hence, all other font (in %) will automatically decrease */
         body {
             font-size: 16px;
         }
+
         /* reduce vertical white-space */
         section {
             padding: 30px 0;
         }
+
         /* add horizontal padding
     .row,
     .hero-text-box {
@@ -101,15 +122,18 @@
         .col {
             width: 100%;
         }
+
         /* put mobile navigation using jquery */
         /* for now just hide the navigation */
         .main-nav {
             display: none;
             margin-top: 10px;
         }
+
         .mobile-nav-icon {
             display: inline-block;
         }
+
         /* make the humberger go to the right & main nav to the left */
         .main-nav {
             float: left;
@@ -117,10 +141,12 @@
             margin-top: 30px;
             margin-left: 30px;
         }
+
         /* list down the elements */
         .main-nav li {
             display: block;
         }
+
         /* style the links inside of them */
         .main-nav li a:link,
         .main-nav li a:visited {
@@ -131,28 +157,35 @@
             padding: 10px 0;
             font-size: 100%;
         }
+
         .sticky .main-nav a:link,
         .sticky .main-nav a:visited {
             padding: 10px 0;
         }
+
         .sticky .mobile-nav-icon {
             margin-top: 10px;
         }
+
         .sticky .mobile-nav-icon i {
             color: #555;
         }
+
         .long-copy {
             /* remove padding */
             width: 100%;
             /* center the paragraphs */
             margin-left: 0%;
         }
+
         h1 {
             font-size: 180%;
         }
+
         h2 {
             font-size: 150%;
         }
+
         .works-step div {
             height: 40px;
             width: 40px;
@@ -160,17 +193,53 @@
             margin-right: 15px;
             font-size: 120%;
         }
+
         .works-step:last-of-type {
             margin-bottom: 30px;
         }
-        /* image */
+
+        /* image
         .steps-box:first-child {
             text-align: center;
+        } */
+
+        .steps-box:first-child {
+            text-align: center;
+            padding-right: 0;
         }
+
+        .steps-box:last-child {
+            padding-left: 0;
+        }
+
+        /* image */
+        .steps-box {
+            text-align: center;
+        }
+
+        #schedule {
+            /* width: 100%; */
+            /* width: 80%; */
+            /* margin-left: 5%; */
+            margin-left: 0;
+
+        }
+
         /* actual image */
         .website-screen {
             width: 50%;
         }
+
+        .footer-nav,
+        .social-links {
+            float: none;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
         /* fix first column */
         /* from script file columnmargin */
         /* .col {
@@ -182,16 +251,19 @@
             margin: 0% 0 4% 0%;
         }
     }
+
     /* minify */
     /* 1st, reduce screen to the lowest width:  */
     /* small phones: from 0 to 480px : width for old iphones, iphone5 etc*/
-    
+
     @media only screen and (max-width: 480px) {
+
         /* reduce padding btn sections */
         /* reduce vertical white-space */
         section {
             padding: 20px 0;
         }
+
         .section-form {
             /* add % of the parent container */
             width: 90%;
