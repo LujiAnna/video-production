@@ -645,7 +645,7 @@ input[type=submit]:active {
 
 /* <!-- TODO: switch main with section-glider and container with container-glider --> */
 
-.container {
+/* .container {
     padding: 4rem 2rem;
     margin: 0 auto;
     max-width: 75rem;
@@ -701,7 +701,7 @@ input[type=submit]:active {
     .main .glider-contain .dots {
         display: none;
     }
-}
+} */
 
 /* ---------------------------------- */
 
