@@ -1,7 +1,7 @@
 //Use js plugins to do stuff or google for jquery snippets
 
 
-$(document).ready(function() { //select document
+$(document).ready(function () { //select document
     //    try out sticky navigation
     //    $('h1').click(function() {
     //        $(this).css('background-color', '#ff0000');
@@ -15,7 +15,7 @@ $(document).ready(function() { //select document
 
     //    Sticky Navigation: code from PLUGIN
     //    direction: up or down
-    $('.js--section-features').waypoint(function(direction) { //select class
+    $('.js--section-features').waypoint(function (direction) { //select class
         if (direction == 'down') {
             //            remove sticky class from nav
             $('nav').addClass('sticky')
@@ -29,12 +29,12 @@ $(document).ready(function() { //select document
     });
 
     //    Scroll on buttons - SELF code
-    $('.js--scroll-to-plans').click(function() { //select class and event method
+    $('.js--scroll-to-plans').click(function () { //select class and event method
         $('html, body').animate({ scrollTop: $('.js--section-plans').offset().top }, 1000); //select html&body, and section
     });
 
     //    Scroll on buttons
-    $('.js--scroll-to-start').click(function() { //select class and event method
+    $('.js--scroll-to-start').click(function () { //select class and event method
         $('html, body').animate({ scrollTop: $('.js--section-features').offset().top }, 1000); //select html&body, and section, 1000 unit is 1second
     });
 
@@ -44,7 +44,7 @@ $(document).ready(function() { //select document
         // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
-        .click(function(event) {
+        .click(function (event) {
             // On-page links
             if (
                 location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
@@ -59,7 +59,7 @@ $(document).ready(function() { //select document
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top
-                    }, 1000, function() {
+                    }, 1000, function () {
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);
@@ -100,7 +100,7 @@ $(document).ready(function() { //select document
 
     // mobile navigation
     // slideToggle - CODE from: JQUERY METHOD
-    $('.js--nav-icon').click(function() {
+    $('.js--nav-icon').click(function () {
         var nav = $('.js--main-nav');
 
         nav.slideToggle(200);
@@ -116,6 +116,7 @@ $(document).ready(function() { //select document
             icon.removeClass('ion-close-round');
         }
     });
+
 
 
 });
