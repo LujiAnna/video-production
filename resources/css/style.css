@@ -548,7 +548,7 @@ input[type=submit]:active {
 /* ---------------------------------- */
 
 
-/* COUNTRIES */
+/* HEY MUM */
 
 
 /* ---------------------------------- */
@@ -595,6 +595,19 @@ input[type=submit]:active {
     background-attachment: fixed;
     padding-right: 20px;
     padding-left: 20px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 /* TABLE */
