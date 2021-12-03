@@ -493,6 +493,9 @@ input[type=submit]:active {
 
 
 /* ---------------------------------- */
+#team {
+    background-color: #fff;
+}
 
 .section-steps {
     background-color: #f5f5f5;

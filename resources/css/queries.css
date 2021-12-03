@@ -123,6 +123,11 @@
             width: 100%;
         }
 
+         /* turn column to stack */
+         #team .col{
+            width: 50%;
+        }
+
         /* put mobile navigation using jquery */
         /* for now just hide the navigation */
         .main-nav {
