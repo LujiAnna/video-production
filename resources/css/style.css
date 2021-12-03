@@ -140,6 +140,13 @@ h3 {
     margin-bottom: 15px;
 }
 
+#movie {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fcb040;
+    font-size: 100%;
+}
+
 
 /* adding content(line of ht 2px) using css only pseudo class, but can also use border-top/button */
 
