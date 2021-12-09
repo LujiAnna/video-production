@@ -9,7 +9,11 @@
         /* add spacing responsivity */
         .hero-text-box {
             width: 100%;
-            padding: 0 2%;
+            padding: 0 4%;
+            /* width: 1140px; */
+            left: 40%;
+            -webkit-transform: translate(-40%, -50%);
+            transform: translate(-40%, -50%);
         }
 
         /* .row {
@@ -123,8 +127,8 @@
             width: 100%;
         }
 
-         /* turn column to stack */
-         #team .col{
+        /* turn column to stack */
+        #team .col {
             width: 50%;
         }
 
@@ -253,7 +257,7 @@
         margin: 1% 0 1% 1.6%;
     } */
         .col {
-            margin: 0% 0 4% 0%;
+            margin: 4% 0 4% 0%;
         }
     }
 
@@ -273,4 +277,84 @@
             /* add % of the parent container */
             width: 90%;
         }
+    }
+
+    /* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+    @media only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px) {
+
+        /* Force table to not be like tables anymore */
+        table,
+        caption,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            border: 1px solid #fcb040;
+        }
+
+        td {
+            /* Behave  like a "row" */
+            border: none;
+            /* border-bottom: 1px solid #fcb040;
+           position: relative; */
+            padding-left: 50%;
+        }
+
+        td:before {
+            /* Now like a table header */
+            /* position: absolute; */
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            /* top: 10px;
+            left: -90%; */
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+        /* Label the data */
+        td:nth-of-type(1):before {
+            content: "Date: ";
+        }
+
+        td:nth-of-type(2):before {
+            content: "Film: ";
+        }
+
+        td:nth-of-type(3):before {
+            content: "Time: ";
+        }
+
+        td:nth-of-type(4):before {
+            content: "Location: ";
+        }
+
+        td:nth-of-type(5):before {
+            content: "Ticket Informatie: ";
+        }
+
+        #schedule caption {
+            /* padding-top: 10px; */
+            padding-top: 1.4rem;
+            font-size: 120%;
+        }
+
     }

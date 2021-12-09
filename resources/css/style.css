@@ -25,6 +25,13 @@
     box-sizing: border-box;
 }
 
+/* ghost css tool for debug unwanted scrolling */
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+} */
+
 html {
     background-color: #fff;
     color: #505050;
@@ -42,7 +49,6 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
-
 
 /* clear floats with clearfix and add this class on parent of the floating elements*/
 
@@ -189,6 +195,7 @@ h2:after {
     left: 50%;
     -webkit-transform: translate(-40%, -50%);
     transform: translate(-40%, -50%);
+    overflow-x: hidden;
 }
 
 
@@ -379,16 +386,16 @@ input[type=submit] {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-    background-color: #e67e22;
-    border: 1px solid #e67e22;
-    color: #fff;
+    background-color: #FECF21;
+    border: 1px solid #FECF21;
+    /* color: #fff; */
+    color: #505050;
     margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #e67e22;
-    color: #e67e22;
+    border: 1px solid #FECF21;
 }
 
 
@@ -398,19 +405,21 @@ input[type=submit] {
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: #cf6d17;
+    background-color: #fcb040;
     -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
+    color: #fff;
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #cf6d17;
+    border: 1px solid #fcb040;
+    color: #fff;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #cf6d17;
+    border: 1px solid #fcb040;
     color: #fff;
 }
 
@@ -620,15 +629,9 @@ cite img {
     border-collapse: collapse;
     width: 100%;
     background-color: #333;
-    opacity: 0.7;
-    /* width: 80%; */
-    /* center the paragraphs */
+    opacity: 0.8;
     margin-left: 5%;
 }
-
-/* #schedule .col {
-    float: right !important;
-} */
 
 #schedule caption {
     text-transform: uppercase;
@@ -638,7 +641,6 @@ cite img {
 
 #schedule td,
 #schedule th {
-    /* border: 1px solid #000; */
     padding: 10px;
 }
 
